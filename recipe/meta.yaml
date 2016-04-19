@@ -10,21 +10,21 @@ source:
     sha256: c20c58e53f8fbdc47a1fcdec954262528f486cfcb4efa7e1c2e8847ad3e8092f
 
 build:
-    number: 0
+    number: 1
 
 requirements:
     build:
         - python
         - setuptools
         - numpy x.x
-        - jpeg
-        - zlib
+        - jpeg 9*
+        - zlib 1.2*
         - hdf4
     run:
         - python
         - numpy x.x
-        - jpeg
-        - zlib
+        - jpeg 9*
+        - zlib 1.2*
         - hdf4
 
 test:
