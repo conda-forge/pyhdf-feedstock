@@ -5,7 +5,7 @@ Home: http://hdfeos.org/software/pyhdf
 
 Package license: Public Domain
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Python interface to the NCSA HDF4 library
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyhdf-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/pyhdf-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/pyhdf-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pyhdf-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pyhdf-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pyhdf-feedstock/branch/master)
