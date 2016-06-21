@@ -17,14 +17,10 @@ requirements:
         - python
         - setuptools
         - numpy x.x
-        - jpeg 9*
-        - zlib 1.2*
         - hdf4
     run:
         - python
         - numpy x.x
-        - jpeg 9*
-        - zlib 1.2*
         - hdf4
 
 test:
