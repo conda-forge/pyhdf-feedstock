@@ -26,11 +26,13 @@ requirements:
 test:
     imports:
         - pyhdf
+    commands:
+        - conda inspect linkages -n _test pyhdf  # [not win]
 
 about:
     home:  http://hdfeos.org/software/pyhdf
     license: Public Domain
-    summary: Python interface to the NCSA HDF4 library
+    summary: 'Python interface to the NCSA HDF4 library.'
 
 extra:
     recipe-maintainers:

@@ -7,7 +7,7 @@ Package license: Public Domain
 
 Feedstock license: BSD 3-Clause
 
-Summary: Python interface to the NCSA HDF4 library
+Summary: Python interface to the NCSA HDF4 library.
 
 
 
