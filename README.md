@@ -14,14 +14,16 @@ Summary: Python interface to the NCSA HDF4 library.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyhdf-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pyhdf-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pyhdf-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pyhdf-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pyhdf-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pyhdf-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pyhdf-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pyhdf-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pyhdf-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pyhdf-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pyhdf-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pyhdf-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyhdf/badges/version.svg)](https://anaconda.org/conda-forge/pyhdf)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyhdf/badges/downloads.svg)](https://anaconda.org/conda-forge/pyhdf)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyhdf-green.svg)](https://anaconda.org/conda-forge/pyhdf) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyhdf.svg)](https://anaconda.org/conda-forge/pyhdf) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyhdf.svg)](https://anaconda.org/conda-forge/pyhdf) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyhdf.svg)](https://anaconda.org/conda-forge/pyhdf) |
 
 Installing pyhdf
 ================
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
