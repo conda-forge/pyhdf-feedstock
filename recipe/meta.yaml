@@ -9,21 +9,19 @@ source:
   sha256: f1fd2d72838f30fc4e3a7688a4e1a395483b08e54f4955f3b4d384639e13c67a
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
-    - setuptools
-    - numpy 1.8.*  # [not (win and (py35 or py36))]
-    - numpy 1.9.*  # [win and py35]
-    - numpy 1.11.*  # [win and py36]
+    - pip
+    - numpy
     - hdf4
   run:
     - python
-    - numpy >=1.8  # [not (win and (py35 or py36))]
-    - numpy >=1.9  # [win and py35]
-    - numpy >=1.11  # [win and py36]
+    - {{ pin_compatible('numpy') }}
     - hdf4
 
 test:

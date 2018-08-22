@@ -1,5 +1,5 @@
 set LIBRARY_DIRS=%LIBRARY_BIN%;%LIBRARY_LIB%
 set INCLUDE_DIRS=%LIBRARY_INC%
 
-"%PYTHON%" setup.py install --single-version-externally-managed --record record.txt
+"%PYTHON%" -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 if errorlevel 1 exit 1
