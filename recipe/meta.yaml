@@ -1,4 +1,4 @@
-{% set version = "0.9.8" %}
+{% set version = "0.9.10" %}
 
 package:
   name: pyhdf
@@ -28,9 +28,6 @@ requirements:
 test:
   imports:
     - pyhdf
-  commands:
-    - conda inspect linkages -p $PREFIX pyhdf  # [not win]
-    - conda inspect objects -p $PREFIX pyhdf  # [osx]
 
 about:
   home:  http://hdfeos.org/software/pyhdf
