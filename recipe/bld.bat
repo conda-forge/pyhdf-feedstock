@@ -1,5 +1,5 @@
-set INCLUDE_DIRS=%PREFIX%\include
-set LIBRARY_DIRS=%PREFIX%\lib;%PREFIX%\bin
+set INCLUDE_DIRS=%PREFIX%\Library\include
+set LIBRARY_DIRS=%PREFIX%\Library\lib;%PREFIX%\Library\bin
 
 %PYTHON% setup.py build
 %PYTHON% setup.py bdist_msi
