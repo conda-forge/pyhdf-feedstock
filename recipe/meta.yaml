@@ -30,7 +30,7 @@ test:
     - pyhdf
 
 about:
-  home:  http://hdfeos.org/software/pyhdf
+  home:  https://github.com/fhs/pyhdf
   license: MIT
   license_file: LICENSE
   summary: 'Python interface to the NCSA HDF4 library'
