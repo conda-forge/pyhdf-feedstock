@@ -5,7 +5,7 @@
 About pyhdf
 ===========
 
-Home: http://hdfeos.org/software/pyhdf
+Home: https://github.com/fhs/pyhdf
 
 Package license: MIT
 
