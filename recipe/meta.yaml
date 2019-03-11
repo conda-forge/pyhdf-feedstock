@@ -7,6 +7,9 @@ package:
 source:
   url: https://pypi.io/packages/source/p/pyhdf/pyhdf-{{ version }}.tar.gz
   sha256: aea96eb09ed97e1ea54db5e320e617e7891c0d9ee035b1dbefe0e70e3f40ae84
+  patches:
+    # this patch can be dropped in the next relase.
+    - win_libname.patch
 
 build:
   number: 0
