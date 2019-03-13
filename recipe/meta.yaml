@@ -1,20 +1,24 @@
-{% set version = "0.9.10" %}
+{% set version = "0.10.0" %}
 
 package:
   name: pyhdf
   version: {{ version }}
 
 source:
-  url: http://hdfeos.org/software/pyhdf/pyhdf-{{ version }}.tar.gz
-  sha256: f1fd2d72838f30fc4e3a7688a4e1a395483b08e54f4955f3b4d384639e13c67a
+  url: https://pypi.io/packages/source/p/pyhdf/pyhdf-{{ version }}.tar.gz
+  sha256: aea96eb09ed97e1ea54db5e320e617e7891c0d9ee035b1dbefe0e70e3f40ae84
+  patches:
+    # this patch can be dropped in the next relase.
+    - win_libname.patch
 
 build:
-  number: 1000
-  skip: True  # [win]
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
     - python
     - pip
@@ -30,9 +34,10 @@ test:
     - pyhdf
 
 about:
-  home:  http://hdfeos.org/software/pyhdf
-  license: Public Domain
-  summary: 'Python interface to the NCSA HDF4 library.'
+  home:  https://github.com/fhs/pyhdf
+  license: MIT
+  license_file: LICENSE
+  summary: 'Python interface to the NCSA HDF4 library'
 
 extra:
   recipe-maintainers:
