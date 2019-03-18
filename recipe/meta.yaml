@@ -1,4 +1,4 @@
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: pyhdf
@@ -6,10 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pyhdf/pyhdf-{{ version }}.tar.gz
-  sha256: aea96eb09ed97e1ea54db5e320e617e7891c0d9ee035b1dbefe0e70e3f40ae84
-  patches:
-    # this patch can be dropped in the next relase.
-    - win_libname.patch
+  sha256: c939cf92487c37da61b41867b4ab032711ccde407340f7ef7d18917631cf62b2
 
 build:
   number: 0
