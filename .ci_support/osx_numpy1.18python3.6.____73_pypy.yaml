@@ -1,15 +1,25 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
 c_compiler:
-- vs2008
+- clang
+c_compiler_version:
+- '9'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2008
+- clangxx
+cxx_compiler_version:
+- '9'
 hdf4:
 - '4.2'
+macos_machine:
+- x86_64-apple-darwin13.4.0
+macos_min_version:
+- '10.9'
 numpy:
-- '1.14'
+- '1.18'
 pin_run_as_build:
   hdf4:
     max_pin: x.x
@@ -17,8 +27,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- '2.7'
+- 3.6.* *_73_pypy
 zip_keys:
-- - python
-  - c_compiler
-  - cxx_compiler
+- - numpy
+  - python
