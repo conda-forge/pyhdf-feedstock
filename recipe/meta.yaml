@@ -1,4 +1,4 @@
-{% set version = "0.10.2" %}
+{% set version = "0.10.3" %}
 
 package:
   name: pyhdf
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pyhdf/pyhdf-{{ version }}.tar.gz
-  sha256: b1cc5e216d8f0ecc8006d2f8d8b6d5a546eacb6a9093d8640b76411a3322fcbc
+  sha256: a3b1ba8056e9a44234f00c2c9592b90f569f5af3260ac3e88a8f8ff9374396a8
 
 build:
-  number: 3
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"  # [not win]
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv  # [not win]
 
 requirements:
   build:
@@ -31,11 +31,11 @@ test:
     - pyhdf
 
 about:
-  home:  https://github.com/fhs/pyhdf
+  home: https://github.com/fhs/pyhdf
   license: MIT
   license_file: LICENSE
-  summary: 'Python interface to the NCSA HDF4 library'
+  summary: Python interface to the NCSA HDF4 library
 
 extra:
   recipe-maintainers:
-      - ocefpaf
+    - ocefpaf
