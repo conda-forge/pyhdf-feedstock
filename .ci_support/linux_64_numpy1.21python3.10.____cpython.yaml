@@ -19,8 +19,6 @@ hdf4:
 numpy:
 - '1.21'
 pin_run_as_build:
-  hdf4:
-    max_pin: x.x
   python:
     min_pin: x.x
     max_pin: x.x
