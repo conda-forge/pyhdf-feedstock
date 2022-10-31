@@ -24,10 +24,12 @@ requirements:
     - pip
     - numpy
     - hdf4
+    - zlib
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - hdf4
+    - zlib
 
 test:
   imports:
