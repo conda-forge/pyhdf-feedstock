@@ -10,7 +10,8 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv  # [not win]
+  skip: True  # [win]
+  script: {{ PYTHON }} -m pip install . -vv  # [not win]
 
 requirements:
   build:
@@ -21,6 +22,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
+    - setuptools
     - pip
     - numpy
     - hdf4
