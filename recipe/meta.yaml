@@ -10,8 +10,7 @@ source:
 
 build:
   number: 1
-  skip: True  # [win]
-  script: {{ PYTHON }} -m pip install . -vv  # [not win]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
