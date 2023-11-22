@@ -7,11 +7,12 @@ package:
 source:
   url: https://pypi.io/packages/source/p/pyhdf/pyhdf-{{ version }}.tar.gz
   sha256: c3a3bbfbd22c6c97a62b4149f746461b9816d93dd08ce1c9315bd642625426a3
+  patches:
+    - patches/turbojpeg_win.patch
 
 build:
-  number: 1
-  skip: True  # [win]
-  script: {{ PYTHON }} -m pip install . -vv  # [not win]
+  number: 2
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:

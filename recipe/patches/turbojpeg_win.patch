@@ -1,0 +1,12 @@
+diff -Naur pyhdf_orig/setup.py pyhdf_new/setup.py
+--- pyhdf_orig/setup.py	2023-06-25 01:01:46.000000000 -0500
++++ pyhdf_new/setup.py	2023-11-22 11:10:37.840924987 -0600
+@@ -85,7 +85,7 @@
+ else:
+     extra_compile_args = ["-DNOSZIP"]
+ if sys.platform == "win32":
+-    libraries += ["libjpeg", "zlib", "ws2_32"]
++    libraries += ["jpeg", "zlib", "ws2_32"]
+ else:
+     libraries += ["jpeg", "z"]
+ 
