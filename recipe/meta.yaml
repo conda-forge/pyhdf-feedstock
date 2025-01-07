@@ -1,17 +1,17 @@
-{% set version = "0.11.4" %}
+{% set version = "0.11.6" %}
 
 package:
   name: pyhdf
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pyhdf/pyhdf-{{ version }}.tar.gz
-  sha256: f4d48ee6f297be76e07b1a31710ef898caa31757dfdf173e5a4b94988ea76164
+  url: https://pypi.org/packages/source/p/pyhdf/pyhdf-{{ version }}.tar.gz
+  sha256: 9f6de3dd0a9651581e11e9a20f33ba16f4c79fb316c76082060ab33aeef98c5a
   patches:
     - patches/turbojpeg_win.patch
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -30,6 +30,7 @@ requirements:
     - hdf4
     - zlib
   run:
+    - numpy
     - python
     - hdf4
     - zlib
