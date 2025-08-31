@@ -1,0 +1,12 @@
+diff -Naru pyhdf-0.11.6-orig/pyhdf/hdfext_wrap.c pyhdf-0.11.6-patch/pyhdf/hdfext_wrap.c
+--- pyhdf-0.11.6-orig/pyhdf/hdfext_wrap.c	2025-01-04 22:02:24.000000000 -0600
++++ pyhdf-0.11.6-patch/pyhdf/hdfext_wrap.c	2025-08-30 21:30:54.109399554 -0500
+@@ -4116,7 +4116,7 @@
+ #ifdef NOCOMPRESS
+     status = -1;
+ #else
+-    status = SDgetcompress(sds_id, comp_type, &c_info);
++    status = SDgetcompress(sds_id, (int *)comp_type, &c_info);
+     switch (*comp_type)  {
+         case COMP_CODE_NONE:
+         case COMP_CODE_RLE :
