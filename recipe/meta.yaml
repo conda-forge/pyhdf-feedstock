@@ -9,9 +9,10 @@ source:
   sha256: 9f6de3dd0a9651581e11e9a20f33ba16f4c79fb316c76082060ab33aeef98c5a
   patches:
     - patches/turbojpeg_win.patch
+    - patches/sdgetcompress_int.patch
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
