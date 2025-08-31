@@ -6,7 +6,7 @@ diff -Naru pyhdf-0.11.6-orig/pyhdf/hdfext_wrap.c pyhdf-0.11.6-patch/pyhdf/hdfext
      status = -1;
  #else
 -    status = SDgetcompress(sds_id, comp_type, &c_info);
-+    status = SDgetcompress(sds_id, (int *)comp_type, &c_info);
++    status = SDgetcompress(sds_id, (comp_coder_t *)comp_type, &c_info);
      switch (*comp_type)  {
          case COMP_CODE_NONE:
          case COMP_CODE_RLE :
