@@ -12,8 +12,8 @@ source:
     - patches/sdgetcompress_int.patch
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 2
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
@@ -26,6 +26,7 @@ requirements:
   host:
     - python
     - setuptools
+    - setuptools-scm
     - pip
     - numpy
     - hdf4
@@ -39,6 +40,10 @@ requirements:
 test:
   imports:
     - pyhdf
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/fhs/pyhdf
