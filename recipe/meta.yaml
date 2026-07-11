@@ -1,4 +1,4 @@
-{% set version = "0.11.6" %}
+{% set version = "0.11.7" %}
 
 package:
   name: pyhdf
@@ -6,13 +6,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyhdf/pyhdf-{{ version }}.tar.gz
-  sha256: 9f6de3dd0a9651581e11e9a20f33ba16f4c79fb316c76082060ab33aeef98c5a
+  sha256: 5c015589e0d01c191f70855a016ccd8c19106aba7390c9204f3e2a1b7080d335
   patches:
     - patches/turbojpeg_win.patch
     - patches/sdgetcompress_int.patch
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
