@@ -1,0 +1,57 @@
+schema_version: 1
+
+context:
+  version: "0.11.7"
+
+package:
+  name: pyhdf
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/p/pyhdf/pyhdf-${{ version }}.tar.gz
+  sha256: 5c015589e0d01c191f70855a016ccd8c19106aba7390c9204f3e2a1b7080d335
+
+build:
+  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - numpy
+    - ${{ compiler("c") }}
+    - ${{ compiler("cxx") }}
+    - ${{ stdlib("c") }}
+  host:
+    - python
+    - setuptools
+    - setuptools-scm
+    - pip
+    - numpy
+    - hdf4
+    - zlib
+  run:
+    - python
+    - numpy
+    - hdf4
+    - zlib
+
+tests:
+  - python:
+      imports:
+        - pyhdf
+      pip_check: true
+
+about:
+  summary: Python interface to the NCSA HDF4 library
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/fhs/pyhdf
+
+extra:
+  recipe-maintainers:
+    - djhoese
+    - ocefpaf
